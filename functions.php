@@ -84,6 +84,35 @@ endif;
 add_action( 'after_setup_theme', 'odessaflex_setup' );
 
 /**
+ * Register custom fonts.
+ */
+function odessaflex_fonts_url() {
+	$fonts_url = '';
+
+	/*
+	 * Translators: If there are characters in your language that are not
+	 * supported by Ubuntu, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$ubuntu_sans = _x( 'on', 'Ubuntu font: on or off', 'odessaflex' );
+
+	if ( 'off' !== $ubuntu_sans ) {
+		$font_families = array();
+
+		$font_families[] = 'Ubuntu:300,400,400i,500,700';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
@@ -121,7 +150,7 @@ add_action( 'widgets_init', 'odessaflex_widgets_init' );
  */
 function odessaflex_scripts() {
 	// Enqueue Google Fonts Ubunt font-family
-	wp_enqueue_style( 'odessaflex-fonts' , 'https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,700' );
+	wp_enqueue_style( 'odessaflex-fonts' , odessaflex_fonts_url(), array(), null );
 
 	wp_enqueue_style( 'odessaflex-style', get_stylesheet_uri() );
 
