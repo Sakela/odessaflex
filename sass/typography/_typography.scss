@@ -9,15 +9,15 @@ textarea {
 	@include font-size(0.9);
 	line-height: $font__line-height-body;
 
-	@media only screen and (min-width: 750px) {
+	@media only screen and (min-width: $query__medium) {
 		@include font-size(0.95);
 	}
 
-	@media only screen and (min-width: 1200px) {
+	@media only screen and (min-width: $query__large) {
 		@include font-size(1);
 	}
 
-	@media only screen and (min-width: 1800px) {
+	@media only screen and (min-width: $query__extralarge) {
 		@include font-size(1.2);
 	}
 }
