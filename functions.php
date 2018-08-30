@@ -99,7 +99,7 @@ function odessaflex_fonts_url() {
 	if ( 'off' !== $ubuntu_sans ) {
 		$font_families = array();
 
-		$font_families[] = 'Ubuntu:300,300i,400,400i,500,700';
+		$font_families[] = 'Ubuntu:200,200i,300,300i,400,400i,500,700';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
