@@ -120,6 +120,9 @@ add_action( 'widgets_init', 'odessaflex_widgets_init' );
  * Enqueue scripts and styles.
  */
 function odessaflex_scripts() {
+	// Enqueue Google Fonts Ubunt font-family
+	wp_enqueue_style( 'odessaflex-fonts' , 'https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,700' );
+
 	wp_enqueue_style( 'odessaflex-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'odessaflex-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
