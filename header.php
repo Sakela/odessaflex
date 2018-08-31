@@ -27,8 +27,10 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
+			the_custom_logo(); ?>
+			
+			<div class="site-branding_text">
+			<?php if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
@@ -42,6 +44,7 @@
 				?>
 				<p class="site-description"><?php echo $odessaflex_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
+			</div><!-- .site-branding_text -->
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
@@ -56,8 +59,10 @@
 
 	</header><!-- #masthead -->
 
-	<figure class="header-image"><!-- header-image -->
-		<?php the_header_image_tag(); ?>
-	</figure>
+	<?php if ( is_front_page() ) : ?>
+		<figure class="header-image"><!-- header-image -->
+			<?php the_header_image_tag(); ?>
+		</figure>
+	<?php endif;?>
 
 	<div id="content" class="site-content">

@@ -1,5 +1,6 @@
 .site-header {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     padding: 1em;
     background-color: $color__background-header;
@@ -22,7 +23,25 @@ header#masthead:after {
 }
 
 .site-branding {
+    display: flex;
     min-height: 65px;
+}
+
+.custom-logo-link {
+    margin-right: 1em;
+
+    img {
+        display: block;
+        height: 65px;
+        width: auto;
+    }
+}
+
+.site-branding_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 65px;
 }
 
 .site-title {

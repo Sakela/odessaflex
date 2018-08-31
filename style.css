@@ -919,6 +919,8 @@ a:hover, a:active {
 .site-header {
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	position: relative;
 	padding: 1em;
 	background-color: #3f4045;
@@ -943,7 +945,29 @@ header#masthead:after {
 }
 
 .site-branding {
+	display: -ms-flexbox;
+	display: flex;
 	min-height: 65px;
+}
+
+.custom-logo-link {
+	margin-right: 1em;
+}
+
+.custom-logo-link img {
+	display: block;
+	height: 65px;
+	width: auto;
+}
+
+.site-branding_text {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	height: 65px;
 }
 
 .site-title {
