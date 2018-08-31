@@ -53,6 +53,11 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
 	</header><!-- #masthead -->
+
+	<figure class="header-image"><!-- header-image -->
+		<?php the_header_image_tag(); ?>
+	</figure>
 
 	<div id="content" class="site-content">

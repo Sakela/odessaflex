@@ -19,9 +19,9 @@
 function odessaflex_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'odessaflex_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'default-text-color'     => 'fff',
+		'width'                  => 2000,
+		'height'                 => 750,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'odessaflex_header_style',
 	) ) );

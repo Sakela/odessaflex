@@ -11,18 +11,3 @@
         padding: 2.2em;
     }
 }
-
-.site-header,
-.site-footer {
-    padding: 0 1em;
-
-    @media screen and (min-width: $query__medium) {
-        padding: 0 1.5em;
-    }
-    @media screen and (min-width: $query__large) {
-        padding: 0 2em;
-    }
-    @media screen and (min-width: $query__extralarge) {
-        padding: 0 2.2em;
-    }
-}
