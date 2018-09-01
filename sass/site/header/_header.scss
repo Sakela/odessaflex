@@ -90,10 +90,13 @@ header#masthead:after {
     }
 
     .main-navigation {
-        width: 65%;
+        width: 55%;
+        // display: flex;
+        // justify-content: flex-end;
 
         ul {
-            float: right;
+            display: flex;
+            justify-content: space-evenly;
         }
     }
 }

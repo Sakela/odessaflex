@@ -1015,10 +1015,13 @@ header#masthead:after {
 		width: 35%;
 	}
 	.main-navigation {
-		width: 65%;
+		width: 55%;
 	}
 	.main-navigation ul {
-		float: right;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: space-evenly;
+		    justify-content: space-evenly;
 	}
 }
 
