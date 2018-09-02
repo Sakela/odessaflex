@@ -1021,6 +1021,13 @@ Header Menu
 	text-decoration: underline;
 }
 
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	text-decoration: underline;
+}
+
 .main-navigation .menu-item-has-children,
 .main-navigation .page_item_has_children {
 	min-width: 218px;
@@ -1039,6 +1046,7 @@ button.dropdown-toggle {
 	color: white;
 	line-height: 1.5em;
 	padding: .4em 1em .4em .5em;
+	cursor: pointer;
 }
 
 .menu-toggle {
@@ -1056,7 +1064,7 @@ button.dropdown-toggle {
 
 /* Toggle small menu and children on */
 .toggled-on ul,
-.sub-menu.toggled-on {
+.main-navigation ul ul.toggled-on {
 	display: block;
 }
 
@@ -1070,7 +1078,6 @@ button.dropdown-toggle {
 		background: rgba(255, 255, 255, 0.1);
 	}
 	.main-navigation ul {
-		display: block;
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-wrap: wrap;
@@ -1100,12 +1107,10 @@ button.dropdown-toggle {
 		    justify-content: flex-end;
 		padding-top: 0;
 		/* If you want dropdowns to open on hover, uncomment this: */
-		/*
-			li:hover > ul,
-				li:focus > ul {
-				display: block;
-			}
-			*/
+	}
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li:focus > ul {
+		display: block;
 	}
 }
 
