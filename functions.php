@@ -45,6 +45,7 @@ if ( ! function_exists( 'odessaflex_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'odessaflex' ),
+			'social-footer' => esc_html__( 'Social Footer Menu', 'odessaflex' ),
 		) );
 
 		/*
