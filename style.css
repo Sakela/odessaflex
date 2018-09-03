@@ -384,7 +384,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #3f4045;
 	font-family: "Ubuntu", Geneva, Arial, sans-serif;
 	font-size: 12.6;
 	font-size: 0.7875rem;
@@ -623,7 +623,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
+	color: #3f4045;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
@@ -645,7 +645,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	color: #3f4045;
 }
 
 select {
@@ -733,7 +733,7 @@ a:hover, a:active {
 	clip: auto !important;
 	-webkit-clip-path: none;
 	        clip-path: none;
-	color: #21759b;
+	color: #3f4045;
 	display: block;
 	font-size: 12.25;
 	font-size: 0.76563rem;
