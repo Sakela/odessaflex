@@ -1,0 +1,36 @@
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1em;
+    background-color: $color__background-header;
+    color: $color__header;
+
+    @media screen and (min-width: $query__medium) {
+        padding: 1em 1.5em;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+
+        li {
+            list-style-type: none;
+            margin: 0 1em;
+        }
+    }
+
+}
+
+#colophon:before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 9;
+    background: linear-gradient(to right,$color__body-insertions, transparent, $color__body-insertions);
+}
